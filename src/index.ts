@@ -1,3 +1,4 @@
+import dbConnect from "./Utils/dbConnection";
 import app from "./app";
 import env from "dotenv";
 env.config();
@@ -5,6 +6,7 @@ env.config();
 const PORT = process.env.PORT;
 
 // db connect
+dbConnect();
 
 
 const server = app.listen(PORT, () => {
